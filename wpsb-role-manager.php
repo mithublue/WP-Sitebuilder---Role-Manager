@@ -23,7 +23,7 @@ if( !class_exists( 'WPSB_Pagebuilder' ) ) {
     return;
 };
 
-define( 'SBRM_VERSION', '0.0.1' );
+define( 'SBRM_VERSION', '1.0' );
 define( 'SBRM_ROOT', dirname(__FILE__) );
 define( 'SBRM_ASSET_PATH', plugins_url('assets',__FILE__) );
 
