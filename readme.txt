@@ -4,7 +4,7 @@ Tags: role, role manager, wp role manager, capability, capabilities manager , ca
 
 Requires at least: 3.0.1
 Tested up to: 4.6.1
-Stable tag: 0.1
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,6 @@ Add on for WP Sitebuilder plugin that lets you create and manage roles and capab
 
 == Changelog ==
 
-== 0.1 ==
+== 1.0 ==
 
 Plugin released

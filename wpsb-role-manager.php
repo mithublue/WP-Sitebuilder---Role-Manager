@@ -5,7 +5,7 @@
  * Description: Add on for WP Sitebuilder plugin that lets you create and manage roles and capabilities.
  * Author: Mithu A Quayium
  * Author URI:
- * Version: 0.0.1
+ * Version: 1.0
  * Text Domain: sbrm
  * License: GPL2
 */
