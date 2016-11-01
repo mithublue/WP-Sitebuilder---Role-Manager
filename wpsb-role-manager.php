@@ -80,10 +80,12 @@ class Sbrm_Init {
         if( $hook == 'wp-sitebuilder_page_sbrm_role_mananger' ) {
             //style
             wp_enqueue_style('lego-wrapper-css');
+            wp_enqueue_style('wpsb-vue-widget-css');// vue ui widget css
             wp_enqueue_style('lego-framework-css');
             wp_enqueue_style('sbrm-admin-css', SBRM_ASSET_PATH.'/css/admin-sbrm.css');
             //script
             wp_enqueue_script('wpsb-vue');
+            wp_enqueue_script('lego-components-js');
         }
     }
 

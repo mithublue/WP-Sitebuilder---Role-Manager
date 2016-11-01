@@ -1,3 +1,4 @@
+<?php include_once WPSB_ROOT.'/components/element-components.php'; ?>
 <div id="sbrm_app" class="bs-container m20" v-cloak>
     <?php
     global $wp_roles;
@@ -39,12 +40,12 @@
                     <div class="row">
                         <label class="col-sm-3" v-for="(capname, capval) in all_caps">
                             <div v-if="saved_role_caps.roles[targeted_role].capabilities[capname] == 'false'">
-                                {{ saved_role_caps.roles[targeted_role].capabilities[capname]  = false }}
+                                {{ saved_role_caps.roles[targeted_role].capabilities[capname]  = 0 }}
                             </div>
                             <div v-if="saved_role_caps.roles[targeted_role].capabilities[capname] == 'true'">
-                                {{ saved_role_caps.roles[targeted_role].capabilities[capname]  = true }}
+                                {{ saved_role_caps.roles[targeted_role].capabilities[capname]  = 1 }}
                             </div>
-                            <input type="checkbox" v-model="saved_role_caps.roles[targeted_role].capabilities[capname]"> {{ capname }}
+                            <input type="checkbox" v-model="saved_role_caps.roles[targeted_role].capabilities[capname]" :true-value="1" :false-value="0"> {{ capname }}
                         </label>
                     </div>
                 </div>
@@ -54,6 +55,16 @@
             </div>
         </div>
     </div>
+    <notice_modal :show.sync="show_add_role_panel" default_button="true" disappear="auto">
+        <div slot="header">
+            <div v-if="saved_result.success" class="alert alert-success">
+                {{ saved_result.success }}
+            </div>
+        </div>
+        <div slot="body">
+
+        </div>
+    </notice_modal>
 </div>
 <script>
     jQuery(document).ready(function () {
@@ -107,13 +118,11 @@
                             role_caps_data : role_caps_data
                         },
                         function (data) {
-                            data = JSON.parse( data );
-                            if( data.success ) {
-                                alert(data.success);
-                            } else if( data.error ){
-                                alert( data.error );
+                            sbrm_app.saved_result = data = JSON.parse( data );
+                            if( sbrm_app.saved_result.success ) {
+                                sbrm_app.show_add_role_panel = true;
                             }
-                            sbrm_app.saved_result = data;
+
                         }
                     )
                 }
