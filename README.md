@@ -30,6 +30,15 @@ Add on for WP Sitebuilder plugin that lets you create and manage roles and capab
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
  
+### Why this plugin for ? ###
+
+With this plugin You can
+
+* create role 
+* delete role
+* assign capabilites to any role
+* see all roles and their capabilities at a time clearly and manage them
+
 ### Screenshots ###
 
 1. ![WP Role Manager](http://mithublue.github.io/images/wpsb-role-manager/screenshot-1.png)
