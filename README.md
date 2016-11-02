@@ -24,6 +24,10 @@ Add on for WP Sitebuilder plugin that lets you create and manage roles and capab
 
 Add on for WP Sitebuilder plugin that lets you create and manage roles and capabilities.
 
+# Important ! #
+
+TO USE IT, You must have <a href="https://wordpress.org/plugins/wp-sitebuilder/">WP Sitebuilder</a> Installed and activated to your site.
+
 ### Installation ###
 
 1. Upload `wpsb-role-manager` to the `/wp-content/plugins/` directory
